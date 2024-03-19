@@ -11,6 +11,9 @@ import java.util.List;
 import com.example.demo.dtos.UsersDTO;
 import com.example.demo.entities.Users;
 import com.example.demo.services.UsersService;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 @RestController
 @RequestMapping(value="/users")
@@ -25,8 +28,16 @@ public class UsersController {
 		return result;
 	}
 	
-	@PostMapping
-	public Users postUsers(@RequestBody Users users) {
-		return usersService.salveUsers(users);
+	@GetMapping(value = "/{id}") 
+	public UsersDTO findById(@PathVariable long id) {
+		UsersDTO result = usersService.findById(id);
+		return result;
 	}
+	
+	@PostMapping
+	public UsersDTO postUsers(@RequestBody Users users) {
+		UsersDTO dto = usersService.salveUsers(users);
+		return dto;
+	}
+	
 }
