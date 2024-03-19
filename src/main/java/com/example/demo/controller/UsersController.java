@@ -46,4 +46,8 @@ public class UsersController {
 		usersService.deleteUsers(id);
 	}
 	
+	@PutMapping(value = "/{id}")
+	public UsersDTO update(@PathVariable long id, @RequestBody Users users) {
+		return usersService.updateUser(id, users);
+	}
 }
