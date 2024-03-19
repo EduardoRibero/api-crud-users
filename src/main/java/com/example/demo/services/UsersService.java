@@ -27,11 +27,15 @@ public class UsersService {
 		return new UsersDTO(usersRepository.save(users));
 	}
 	
-	public UsersDTO findById(@PathVariable long id) {
+	public UsersDTO findById(long id) {
 		Users result = usersRepository.findById(id).get();
 		UsersDTO dto = new UsersDTO(result);
 		return dto;
-	};
+	}
+	
+	public void deleteUsers(long id) {
+		usersRepository.deleteById(id);
+	}
 	
 	
 }

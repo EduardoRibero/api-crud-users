@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,6 +39,11 @@ public class UsersController {
 	public UsersDTO postUsers(@RequestBody Users users) {
 		UsersDTO dto = usersService.salveUsers(users);
 		return dto;
+	}
+	
+	@DeleteMapping(value = "/{id}")
+	public void deleteUsers(@PathVariable long id) {
+		usersService.deleteUsers(id);
 	}
 	
 }
