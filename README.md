@@ -35,6 +35,47 @@ O projeto segue uma estrutura de camadas com separação de responsabilidades:
 3. Execute o aplicativo Spring Boot.
 4. Acesse os endpoints fornecidos pela API para realizar operações CRUD de usuários.
 
+## Endpoints Disponíveis
+
+### 1. Obter Todos os Usuários
+
+- **Descrição**: Retorna todos os usuários cadastrados no sistema.
+- **Método**: GET
+- **URL**: `http://localhost:8080/users`
+
+### 2. Buscar Usuário por ID
+
+- **Descrição**: Retorna um usuário específico com base em seu ID.
+- **Método**: GET
+- **URL**: `http://localhost:8080/users/{id}`
+  - Substitua `{id}` pelo ID do usuário desejado.
+
+### 3. Adicionar Usuário
+
+- **Descrição**: Adiciona um novo usuário ao sistema.
+- **Método**: POST
+- **URL**: `http://localhost:8080/users`
+- **Corpo da Requisição**:
+  ```json
+  {
+    "name": "ExemploName",
+    "email": "exemploEmail@gmail.com"
+  }
+
+### 4. Atualizar Usuário 
+
+- **Descrição**: Atualizar usuário existente
+- **Método**: PUT
+- **URL**: `http://localhost:8080/users/{id}`
+- Substitua `{id}` pelo ID do usuário que deseja atualizar.
+
+### 5. Deletar Usuário
+
+- **Descrição**: Deletar usuário
+- **Método**: DELETE
+- **URL**: `http://localhost:8080/users/{id}`
+- Substitua `{id}` pelo ID do usuário que deseja deletar.
+
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou enviar solicitações pull.
