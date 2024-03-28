@@ -1,6 +1,6 @@
 # Microserviço CRUD de Usuários
 
-Este é um projeto simples de microserviço para gerenciar usuários com operações básicas CRUD (Create, Read, Update, Delete). O projeto é desenvolvido em Java usando Spring Boot, seguindo uma arquitetura em camadas e orientação a objetos.
+Este é um projeto simples de microserviço para gerenciar usuários com operações básicas CRUD (Create, Read, Update, Delete). O projeto é desenvolvido em Java usando Spring Boot, seguindo a arquitetura de camadas MVC e orientação a objetos.
 
 ## Funcionalidades
 
@@ -14,7 +14,7 @@ Este é um projeto simples de microserviço para gerenciar usuários com operaç
 O projeto segue uma estrutura de camadas com separação de responsabilidades:
 
 1. **Camada de Entidade (Entity Layer)**:
-   - `Usuario`: Classe que representa a entidade de usuário com campos como nome, e-mail, função, sexo, salário, etc.
+   - `Usuario`: Classe que representa a entidade de usuário com campos como nome e e-mail.
 
 2. **Camada de Repositório (Repository Layer)**:
    - `UsuarioRepository`: Interface que estende JpaRepository para realizar operações de persistência no banco de dados.
