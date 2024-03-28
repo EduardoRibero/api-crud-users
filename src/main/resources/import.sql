@@ -1,1 +1,1 @@
-INSERT INTO tb_users (name, email) VALUES ('nomeDeExemplo','email@exemplo');
+INSERT INTO db_users (name, email) VALUES ('nomeDeExemplo','email@exemplo');
