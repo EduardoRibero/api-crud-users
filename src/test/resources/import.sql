@@ -1,0 +1,1 @@
+INSERT INTO testdb (name, email) VALUES ('nomeDeExemplo','email@exemplo');
