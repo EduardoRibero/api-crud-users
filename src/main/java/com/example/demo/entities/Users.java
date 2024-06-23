@@ -15,6 +15,10 @@ public class Users {
 	private Long id;
 	private String name;
 	private String email;
+	private String cpf;
+	private int age;
+	private String password;
+	
 	
 	public Users() {
 		
@@ -50,6 +54,30 @@ public class Users {
 		this.email = email;
 	}
 
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -66,6 +94,10 @@ public class Users {
 		Users other = (Users) obj;
 		return Objects.equals(id, other.id);
 	}
+
+	
+
+
 	
 	
 	
