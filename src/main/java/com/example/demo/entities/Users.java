@@ -1,6 +1,9 @@
 package com.example.demo.entities;
 
 import java.util.Objects;
+
+import com.example.demo.dtos.UsersRequestDTO;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,18 +19,31 @@ public class Users {
 	private String name;
 	private String email;
 	private String cpf;
-	private int age;
 	private String password;
+	private Integer age;
 	
 	
 	public Users() {
 		
 	}
 
-	public Users(Long id, String name, String email) {
+	public Users(Long id, String name, String email, String cpf, String password, Integer age) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
+		this.cpf = cpf;
+		this.password = password;
+		this.age = age;
+		
+	}
+	
+	public Users(UsersRequestDTO user) {
+		
+		this.name = user.getName();
+		this.email = user.getEmail();
+		this.cpf = user.getCpf();
+		this.password = user.getPassword();
+		this.age = user.getAge();
 	}
 
 	public Long getId() {
@@ -71,7 +87,7 @@ public class Users {
 	}
 
 	public String getPassword() {
-		return password;
+		return this.password;
 	}
 
 	public void setPassword(String password) {

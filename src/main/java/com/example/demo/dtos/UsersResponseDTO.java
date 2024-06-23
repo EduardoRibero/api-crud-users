@@ -4,24 +4,28 @@ import java.util.Objects;
 
 import com.example.demo.entities.Users;
 
-public class UsersDTO {
+public class UsersResponseDTO {
 	
 	private Long id;
 	private String name;
 	private String email;
+	private String cpf;
+	private Integer age;
 	
-	public UsersDTO() {
+	public UsersResponseDTO() {
 		
 	}
 
-	public UsersDTO(Users user) {
-		id = user.getId();
-		name = user.getName();
-		email = user.getEmail();
+	public UsersResponseDTO(Users user) {
+		this.id = user.getId();
+		this.name = user.getName();
+		this.email = user.getEmail();
+		this.age = user.getAge();
+		this.cpf = user.getCpf();
 	}
-
+	
 	public Long getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(Long id) {
@@ -29,7 +33,7 @@ public class UsersDTO {
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -37,11 +41,27 @@ public class UsersDTO {
 	}
 
 	public String getEmail() {
-		return email;
+		return this.email;
 	}
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getCpf() {
+		return this.cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public Integer getAge() {
+		return this.age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	@Override
@@ -57,10 +77,9 @@ public class UsersDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UsersDTO other = (UsersDTO) obj;
+		UsersResponseDTO other = (UsersResponseDTO) obj;
 		return Objects.equals(id, other.id);
 	}
-	
 	
 	
 }
