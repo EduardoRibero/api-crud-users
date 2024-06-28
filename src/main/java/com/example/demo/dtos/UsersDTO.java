@@ -9,6 +9,7 @@ public class UsersDTO {
 	private Long id;
 	private String name;
 	private String email;
+	private String cpf;
 	
 	public UsersDTO() {
 		
@@ -18,6 +19,7 @@ public class UsersDTO {
 		id = user.getId();
 		name = user.getName();
 		email = user.getEmail();
+		cpf = user.getCpf();
 	}
 
 	public Long getId() {
@@ -42,6 +44,14 @@ public class UsersDTO {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 	@Override

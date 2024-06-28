@@ -15,15 +15,17 @@ public class Users {
 	private Long id;
 	private String name;
 	private String email;
+	private String cpf;
 	
 	public Users() {
 		
 	}
 
-	public Users(Long id, String name, String email) {
+	public Users(Long id, String name, String email, String cpf) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
+		this.cpf = cpf;
 	}
 
 	public Long getId() {
@@ -48,6 +50,14 @@ public class Users {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getCpf() {
+		return this.cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 	@Override
