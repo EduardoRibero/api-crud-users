@@ -1,4 +1,4 @@
-# Microserviço CRUD de Usuários
+# API CRUD de Usuários
 
 Este é um projeto simples de microserviço para gerenciar usuários com operações básicas CRUD (Create, Read, Update, Delete). O projeto é desenvolvido em Java usando Spring Boot, seguindo a arquitetura de camadas e orientação a objetos.
 
